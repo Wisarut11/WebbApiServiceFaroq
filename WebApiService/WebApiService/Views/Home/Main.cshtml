@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Main Page";
+}
+<style>
+    #background1 {
+        border: 2px solid black;
+        padding: 1px;
+        background: url('../../Images/background.jpg');
+        background-repeat: no-repeat;
+        background-origin: content-box;
+    }
+</style>
+
+<div id="background1">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@ViewBag.Title.</h1>
+            <h2>@ViewBag.Message</h2>
+        </hgroup>
+        <div>
+            <table>
+                <tr>
+                    <td><button class="btn btninfo" onclick="GetAllstudent();return false;">Get All student</button></td>
+                </tr>
+                <tr><td>****************************************************************************************</td></tr>
+                <tr>
+                    <td>Enter student Id: <input class="form-control" type="text" id="txtStudentid" style="width:50PX" /></td>
+                    <td><button class="btn btninfo" onclick="Getstudent();return false;">Get student</button></td>
+                </tr>
+                <tr><td>****************************************************************************************</td></tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr><td>Student Id:</td><td><input class="form-control" type="text" id="txtaddStudentid" /></td></tr>
+                            <tr><td>Student Name:</td><td><input class="form-control" type="text" id="txtaddStudentName" /></td></tr>
+                            <tr><td>Student RollNo:</td><td><input class="form-control" type="text" id="txtaddStudentRollNo" /></td></tr>
+                            <tr><td>Student Dep:</td><td><input class="form-control" type="text" id="txtaddStudentDepartement" /></td></tr>
+                        </table>
+                    </td>
+                    <td><button class="btn btninfo" onclick="Addstudent();return false;">Add student</button></td>
+                    <td><button class="btn btninfo" onclick="Uppdatestudent(); return false;">Update student</button></td>
+                </tr>
+                <tr><td>****************************************************************************************</td></tr>
+                <tr>
+                    <td><button class="btn btninfo" onclick="Deletestudent(); return false;">Delete student</button></td>
+                    <td>Delete student <input class="form-control" type="text" id="txtdelStudentId" style="width:50PX" /></td>
+
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <h3>Oputput of action done through WEB API:</h3>
+    <ol class="round">
+        <li>
+            <div id="divResult"></div>
+
+        </li>
+    </ol>
+</div>
+
